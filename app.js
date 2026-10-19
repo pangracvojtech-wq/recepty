@@ -1,9 +1,9 @@
-// Naètení receptù z pamìti prohlíeèe (nebo vıchozí ukázka)
+// NaÄtenÃ­ receptÅ¯ z pamÄ›ti prohlÃ­Å¾eÄe (nebo vÃ½chozÃ­ ukÃ¡zka)
 let recipes = JSON.parse(localStorage.getItem('recipes')) || [
     {
-        title: "Svíèková na smetanì",
-        ingredients: "Hovìzí zadní\nSmetana ke šlehání\nKoøenová zelenina",
-        instructions: "Uvaøíme zeleninu, rozmixujeme, pøidáme smetanu..."
+        title: "SvÃ­ÄkovÃ¡ na smetanÄ›",
+        ingredients: "HovÄ›zÃ­ zadnÃ­\nSmetana ke Å¡lehÃ¡nÃ­\nKoÅ™enovÃ¡ zelenina",
+        instructions: "UvaÅ™Ã­me zeleninu, rozmixujeme, pÅ™idÃ¡me smetanu..."
     }
 ];
 
@@ -25,7 +25,7 @@ function renderRecipes() {
     });
 }
 
-// Uloení nového receptu
+// UloÅ¾enÃ­ novÃ©ho receptu
 recipeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const newRecipe = {
@@ -41,9 +41,9 @@ recipeForm.addEventListener('submit', (e) => {
     recipeForm.reset();
 });
 
-// Ovládání okna
+// OvlÃ¡dÃ¡nÃ­ okna
 document.getElementById('open-modal-btn').onclick = () => modal.classList.remove('hidden');
 document.getElementById('close-modal-btn').onclick = () => modal.classList.add('hidden');
 
-// První vykreslení
+// PrvnÃ­ vykreslenÃ­
 renderRecipes();
