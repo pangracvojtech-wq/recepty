@@ -1,46 +1,46 @@
-!DOCTYPE html
-html lang=cs
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleMùj Receptáøtitle
-    link rel=stylesheet href=style.css
-head
-body
-    header
-        h1?? Mùj Receptáøh1
-        button id=open-modal-btn+ Pøidat receptbutton
-    header
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÅ¯j ReceptÃ¡Å™</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ðŸ“– MÅ¯j ReceptÃ¡Å™</h1>
+        <button id="open-modal-btn">+ PÅ™idat recept</button>
+    </header>
 
-    main
-        !-- Vyhledávání a filtry --
-        section class=search-bar
-            input type=text id=search-input placeholder=Hledat recept nebo ingredienci...
-        section
+    <main>
+        <!-- VyhledÃ¡vÃ¡nÃ­ a filtry -->
+        <section class="search-bar">
+            <input type="text" id="search-input" placeholder="Hledat recept nebo ingredienci...">
+        </section>
 
-        !-- Seznam receptù --
-        section id=recipe-list class=recipe-grid
-            !-- Sem JS vykreslí recepty --
-        section
-    main
+        <!-- Seznam receptÅ¯ -->
+        <section id="recipe-list" class="recipe-grid">
+            <!-- Sem JS vykreslÃ­ recepty -->
+        </section>
+    </main>
 
-    !-- Formuláø pro nový recept (Modal) --
-    div id=modal class=modal hidden
-        div class=modal-content
-            h2Nová ingredience  Recepth2
-            form id=recipe-form
-                input type=text id=title placeholder=Název receptu required
-                textarea id=ingredients placeholder=Ingredience (každá na nový øádek) rows=4 requiredtextarea
-                textarea id=instructions placeholder=Postup pøípravy rows=5 requiredtextarea
+    <!-- FormulÃ¡Å™ pro novÃ½ recept (Modal) -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>NovÃ¡ ingredience / Recept</h2>
+            <form id="recipe-form">
+                <input type="text" id="title" placeholder="NÃ¡zev receptu" required>
+                <textarea id="ingredients" placeholder="Ingredience (kaÅ¾dÃ¡ na novÃ½ Å™Ã¡dek)" rows="4" required></textarea>
+                <textarea id="instructions" placeholder="Postup pÅ™Ã­pravy" rows="5" required></textarea>
                 
-                div class=modal-actions
-                    button type=submit class=btn-primaryUložit receptbutton
-                    button type=button id=close-modal-btn class=btn-secondaryZrušitbutton
-                div
-            form
-        div
-    div
+                <div class="modal-actions">
+                    <button type="submit" class="btn-primary">UloÅ¾it recept</button>
+                    <button type="button" id="close-modal-btn" class="btn-secondary">ZruÅ¡it</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-    script src=app.jsscript
-body
-html
+    <script src="app.js"></script>
+</body>
+</html>
